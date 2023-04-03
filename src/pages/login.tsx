@@ -3,9 +3,9 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 
 const login = () => {
-  const { data: session } = useSession();
+  const { data: session,status } = useSession({required:true});
   console.log(session);
-  if (session) {
+  if (status==="authenticated") {
     return (
       <>
         {session.user && session.user.image ? (
