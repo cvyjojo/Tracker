@@ -2,17 +2,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 
-// import { api } from "~/utils/api";
-
 function Sidebar() {
   const [activeTab, setActiveTab] = useState<string>("Home");
 
    const { data: sessionData } = useSession();
 
-  //  const { data: secretMessage } = api.example.getSecretMessage.useQuery(
-  //    undefined, // no input
-  //    { enabled: sessionData?.user !== undefined }
-  //  );
   
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -182,20 +176,3 @@ function Sidebar() {
 }
 export default Sidebar;
 
-// const AuthShowcase: React.FC = () => {
- 
-
-//   return (
-//     <div className="flex flex-col items-center justify-center gap-4">
-//       <p className="text-center text-2xl text-white">
-//         {secretMessage && <span> - {secretMessage}</span>}
-//       </p>
-//       <button
-//         className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        
-//       >
-       
-//       </button>
-//     </div>
-//   );
-// };

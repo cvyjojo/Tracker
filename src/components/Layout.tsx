@@ -6,8 +6,10 @@ import Sidebar from "./Sidebar";
 
 export default function Main() {
   return (
-    <div className="grotesk max-w-8xl relative mx-auto max-h-screen overflow-hidden bg-violet-50">
-      <header className="fixed left-60 right-0 top-0 h-16 bg-violet-50 px-4 py-3">
+    <>  <Sidebar />
+    
+     <div className="grotesk max-w-8xl relative mx-auto max-h-screen overflow-hidden bg-violet-50">
+      <header className="fixed  h-16 bg-violet-50 px-4 py-3">
         <div className="mx-auto max-w-4xl">
           <div className="flex items-center justify-between">
             <div>
@@ -61,7 +63,7 @@ export default function Main() {
         </div>
       </header>
 
-      <Sidebar />
+    
 
       <main className="ml-60 max-h-screen overflow-auto pt-16">
         <div className="px-6 py-8">
@@ -239,5 +241,7 @@ export default function Main() {
         </div>
       </main>
     </div>
+    </>
+   
   );
 }
